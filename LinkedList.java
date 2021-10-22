@@ -2,17 +2,16 @@ package com.linkedlist;
 
 public class LinkedList {
     public static void main(String[] args) {
-        UC6 uc6 = new UC6();
-        uc6.append(56);
-        uc6.append(30);
-        uc6.append(70);
-        System.out.println("Linked list");
-        uc6.print();
+            UC8 uc8 = new UC8();
+            uc8.push(56);
+            uc8.push(30);
+            uc8.push(70);
+            System.out.println("Linked list");
+            uc8.print();
 
-        uc6.deleteLast();
-        System.out.println("After inserting 30 in between ");
-        uc6.print();
-
+            uc8.insertAfter(40);
+            System.out.println("After inserting ");
+            uc8.print();
     }
 }
 

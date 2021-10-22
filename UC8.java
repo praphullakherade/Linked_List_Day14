@@ -1,6 +1,6 @@
 package com.linkedlist;
 
-public class UC2 {
+public class UC8 {
     Node head;
     Node tail;
 
@@ -16,6 +16,25 @@ public class UC2 {
         }
     }
 
+    public int insertAfter(int data) {
+        Node node = new Node(data);
+        int flag = 0;
+        Node temp = head;
+        Node prev = head;
+        while (temp != null) {
+            prev = temp;
+            temp = temp.next;
+            if (prev.data == 30) {
+                prev.next = node;
+                node.next = temp;
+                flag = 1;
+                break;
+            }
+
+        }
+        return flag;
+    }
+
     public void print() {
         Node temp = head;
         if (head == null) {
@@ -25,6 +44,7 @@ public class UC2 {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
+        System.out.println();
 
     }
 }
