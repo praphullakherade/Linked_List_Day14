@@ -1,6 +1,6 @@
 package com.linkedlist;
 
-public class UC7 {
+public class UC8 {
     Node head;
     Node tail;
 
@@ -16,20 +16,21 @@ public class UC7 {
         }
     }
 
-    public int search(int data) {
-        Node temp = head;
+    public int insertAfter(int data) {
+        Node node = new Node(data);
         int flag = 0;
+        Node temp = head;
+        Node prev = head;
         while (temp != null) {
-            if (temp.data == data) {
+            prev = temp;
+            temp = temp.next;
+            if (prev.data == 30) {
+                prev.next = node;
+                node.next = temp;
                 flag = 1;
                 break;
             }
-            temp = temp.next;
-        }
-        if (flag == 1) {
-            System.out.println("element found");
-        } else {
-            System.out.println("element not found");
+
         }
         return flag;
     }
